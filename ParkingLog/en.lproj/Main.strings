@@ -1,0 +1,90 @@
+
+/* Class = "UILabel"; text = "出電梯後方向"; ObjectID = "0Z0-Is-9lg"; */
+"0Z0-Is-9lg.text" = "DIR from EL";
+
+/* Class = "UITextField"; placeholder = "ex: A"; ObjectID = "3hf-Hf-6jT"; */
+"3hf-Hf-6jT.placeholder" = "ex: A";
+
+/* Class = "UILabel"; text = "停車的樓層"; ObjectID = "6Sj-0H-jfz"; */
+"6Sj-0H-jfz.text" = "Parked Floor";
+
+/* Class = "UIButton"; normalTitle = "左後"; ObjectID = "7ip-XX-Okd"; */
+"7ip-XX-Okd.normalTitle" = "SW";
+
+/* Class = "UIButton"; normalTitle = "確定"; ObjectID = "8Bg-pj-5D4"; */
+"8Bg-pj-5D4.normalTitle" = "Confirm";
+
+/* Class = "UIButton"; normalTitle = "確定"; ObjectID = "C4C-tX-o2R"; */
+"C4C-tX-o2R.normalTitle" = "Confirm";
+
+/* Class = "UIButton"; normalTitle = "左"; ObjectID = "DDD-ZZ-HcX"; */
+"DDD-ZZ-HcX.normalTitle" = "W";
+
+/* Class = "UILabel"; text = "車位號碼"; ObjectID = "EMB-lL-Kc0"; */
+"EMB-lL-Kc0.text" = "Space Num";
+
+/* Class = "UITextField"; placeholder = "ex: 正前"; ObjectID = "FHA-xX-IvD"; */
+"FHA-xX-IvD.placeholder" = "ex: North";
+
+/* Class = "UILabel"; text = "樓層"; ObjectID = "Fr0-c1-7jY"; */
+"Fr0-c1-7jY.text" = "Floor";
+
+/* Class = "UILabel"; text = "XXXXXXXXXXX"; ObjectID = "H5e-v5-89P"; */
+"H5e-v5-89P.text" = "XXXXXXXXXXX";
+
+/* Class = "UIButton"; normalTitle = "右前"; ObjectID = "HXB-ZK-D4v"; */
+"HXB-ZK-D4v.normalTitle" = "NE";
+
+/* Class = "UIButton"; normalTitle = "右"; ObjectID = "NwN-BZ-OKC"; */
+"NwN-BZ-OKC.normalTitle" = "E";
+
+/* Class = "UILabel"; text = "停車的樓層"; ObjectID = "RXQ-qJ-Ri0"; */
+"RXQ-qJ-Ri0.text" = "Parked Floor";
+
+/* Class = "UITextField"; placeholder = "ex: 1"; ObjectID = "S1K-3N-9i4"; */
+"S1K-3N-9i4.placeholder" = "ex: 1";
+
+/* Class = "UILabel"; text = "停車的區域"; ObjectID = "Xfh-zN-tgu"; */
+"Xfh-zN-tgu.text" = "Parked Area";
+
+/* Class = "UIButton"; normalTitle = "確定"; ObjectID = "Xj7-Nu-DPZ"; */
+"Xj7-Nu-DPZ.normalTitle" = "Confirm";
+
+/* Class = "UILabel"; text = "請點出停車位置"; ObjectID = "XuP-Jb-gQC"; */
+"XuP-Jb-gQC.text" = "Please touch the parked location";
+
+/* Class = "UIButton"; normalTitle = "正前"; ObjectID = "YEN-Fc-r6Q"; */
+"YEN-Fc-r6Q.normalTitle" = "N";
+
+/* Class = "UITabBarItem"; title = "地圖"; ObjectID = "acW-dT-cKf"; */
+"acW-dT-cKf.title" = "Map";
+
+/* Class = "UITabBarItem"; title = "描述"; ObjectID = "cPa-gy-q4n"; */
+"cPa-gy-q4n.title" = "Description";
+
+/* Class = "UILabel"; text = "A"; ObjectID = "caJ-GR-9ml"; */
+"caJ-GR-9ml.text" = "A";
+
+/* Class = "UIButton"; normalTitle = "正後"; ObjectID = "cuw-H0-wfG"; */
+"cuw-H0-wfG.normalTitle" = "S";
+
+/* Class = "UILabel"; text = "1234"; ObjectID = "eGT-Ib-fe8"; */
+"eGT-Ib-fe8.text" = "1234";
+
+/* Class = "UIButton"; normalTitle = "左前"; ObjectID = "hwa-9u-IXp"; */
+"hwa-9u-IXp.normalTitle" = "NW";
+
+/* Class = "UILabel"; text = "2016-05-26 17:30"; ObjectID = "jsn-nz-ZkA"; */
+"jsn-nz-ZkA.text" = "2016-05-26 17:30";
+
+/* Class = "UIButton"; normalTitle = "確定"; ObjectID = "kMe-2q-a7W"; */
+"kMe-2q-a7W.normalTitle" = "Confirm";
+
+/* Class = "UITextField"; placeholder = "ex: 123"; ObjectID = "oWa-Oh-HJy"; */
+"oWa-Oh-HJy.placeholder" = "ex: 123";
+
+/* Class = "UILabel"; text = "區域"; ObjectID = "olO-KN-i6C"; */
+"olO-KN-i6C.text" = "Area";
+
+/* Class = "UIButton"; normalTitle = "右後"; ObjectID = "zXh-wx-tU1"; */
+"zXh-wx-tU1.normalTitle" = "SE";

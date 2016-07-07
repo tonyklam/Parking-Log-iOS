@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  ParkingLog
+
+  Created by Tony Lam on 07/07/2016.
+  Copyright © 2016 Tony Lam. All rights reserved.
+*/
+
+"mv_output_label" = "Click the upper middle icon to save";

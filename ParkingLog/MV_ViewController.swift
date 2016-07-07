@@ -44,8 +44,8 @@ class FirstViewController: UIViewController, UIScrollViewDelegate, UIImagePicker
         let point:CGPoint = gesture.locationInView(gesture.view)
         put_a_pin(point.x, y_float: point.y)
         
-        //Since users have to be reminded about saving the new pin
-        mv_output_label.text = "按上方中間圖示儲存記錄"
+        //Since users have to be reminded about saving the new pin                
+        mv_output_label.text = NSLocalizedString("mv_output_label", comment:"") /* Localization Sample */
     }
 
     override func didReceiveMemoryWarning() {

@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  ParkingLog
+
+  Created by Tony Lam on 07/07/2016.
+  Copyright © 2016 Tony Lam. All rights reserved.
+*/
+
+"mv_output_label" = "按上方中間圖示儲存記錄";
