@@ -14,10 +14,45 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    let userDefaults = NSUserDefaults.standardUserDefaults() /****/
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // Make tabbarController select the tab user last used
+        select_last_tab()
+        
         return true
+    }
+    
+    func select_last_tab()
+    {
+        if let tab_saved:Bool = userDefaults.boolForKey("tab_saved")
+        {
+            if ( tab_saved )
+            {
+                if let tab_last_visited:Int = userDefaults.integerForKey("tab_last_visited")
+                {
+                    if self.window!.rootViewController as? UITabBarController != nil {
+                            let tababarController = self.window!.rootViewController as! UITabBarController
+                            tababarController.selectedIndex = tab_last_visited
+                    }
+                    userDefaults.setBool(false, forKey:"tab_saved")
+                    userDefaults.synchronize()
+                }
+            }
+        }
+    }
+    
+    func save_last_tab()
+    {
+        if self.window!.rootViewController as? UITabBarController != nil {
+            let tababarController = self.window!.rootViewController as! UITabBarController
+            
+            userDefaults.setInteger(tababarController.selectedIndex, forKey: "tab_last_visited")
+            userDefaults.setBool(true, forKey:"tab_saved")
+            userDefaults.synchronize()
+        }
     }
 
     func applicationWillResignActive(application: UIApplication) {
@@ -40,6 +75,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+
+        // Save the tab user last used
+        save_last_tab()
     }
 
     
