@@ -6,4 +6,58 @@
   Copyright © 2016 Tony Lam. All rights reserved.
 */
 
+"confirm" = "Confirm";
+
+"cancel" = "Cancel";
+
+/* Strings used in MV_ViewController.swift */
+
 "mv_output_label" = "Click the upper middle icon to save";
+
+"confirm_original_alert_title" = "Use default background map";
+
+"confirm_original_alert_message" = "Confirm using default background map?";
+
+"confirm_clear_alert_title" = "Delete map related record";
+
+"confirm_clear_alert_message" = "Confirm deleting map related record?";
+
+"remind_pin_alert_title" = "Please touch the parked location";
+
+"remind_pin_alert_message" = "Please touch the parked location on the map";
+
+"mv_output_label_see_pin_at_floor" = "%@ parked on %@ floor as below";
+
+/* \(time) as in regular string */
+"mv_output_label_see_pin_below" = "%@ parked at position below";
+
+"mv_output_label_pls_save" = "Touch the icon in the middle above to save";
+
+"mv_output_label_pls_pin" = "Please touch the parked location";
+
+/* Strings used in Record_Text.swift */
+"SW" = "SW";
+
+"S" = "S";
+
+"SE" = "SE";
+
+"W" = "W";
+
+"E" = "E";
+
+"NW" = "NW";
+
+"N" = "N";
+
+"NE" = "NE";
+
+/* Strings used in TV_ViewController.swift */
+
+"remind_input_alert_title" = "Please input info.";
+
+"remind_input_alert_message" = "Please input parking information";
+
+"tv_confirm_clear_alert_title" = "Delete related record";
+
+"tv_confirm_clear_alert_message" = "Confirm deleting related record？";

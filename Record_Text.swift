@@ -19,16 +19,6 @@ class Record_Text: NSManagedObject {
     {
         var output_txt: String = ""
         
-        /*
-        if ( time != nil )
-        {
-            let dateFormatter = NSDateFormatter()
-            dateFormatter.dateFormat = "yyyy-MM-dd hh:mm"
-            let dateString = dateFormatter.stringFromDate(time!)
-            
-            output_txt += dateString + " Parked at"
-        }
-        */
         output_txt = "Pakred at"
         
         if ( floor != "" )
@@ -71,7 +61,8 @@ class Record_Text: NSManagedObject {
     
     func getDirectionImage() -> String
     {
-        let direction_dictionary: [String: String] = ["左後":"1","正後":"2","右後":"3","左":"4","右":"6","左前":"7","正前":"8","右前":"9"]
+        let direction_dictionary: [String: String] = ["SW":"1","S":"2","SE":"3","W":"4","E":"6","NW":"7","N":"8","NE":"9"]
+        
         if ( direction != "" )
         {
             return "direction_"+direction_dictionary[direction!]!+"_icon.png"

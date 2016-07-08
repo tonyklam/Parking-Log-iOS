@@ -45,7 +45,7 @@ class FirstViewController: UIViewController, UIScrollViewDelegate, UIImagePicker
         put_a_pin(point.x, y_float: point.y)
         
         //Since users have to be reminded about saving the new pin                
-        mv_output_label.text = NSLocalizedString("mv_output_label", comment:"") /* Localization Sample */
+        mv_output_label.text = NSLocalizedString("mv_output_label", comment:"")
     }
 
     override func didReceiveMemoryWarning() {
@@ -157,9 +157,9 @@ class FirstViewController: UIViewController, UIScrollViewDelegate, UIImagePicker
     
     @IBAction func mv_original_btn_onTouch(sender: UIButton) {
         
-        let confirm_original_alert = UIAlertController(title: "回復預設地圖背景", message:"確定回復預設地圖背景？", preferredStyle: .Alert)
-        
-        let okAction = UIAlertAction(title: "確定", style: .Default, handler: {
+        let confirm_original_alert = UIAlertController(title: NSLocalizedString("confirm_original_alert_title", comment:""), message: NSLocalizedString("confirm_original_alert_message", comment:""), preferredStyle: .Alert)
+               
+        let okAction = UIAlertAction(title: NSLocalizedString("confirm", comment:""), style: .Default, handler: {
             (action:UIAlertAction) -> () in
             self.mv_background_imageView.image = UIImage(named:"mf_background_0.png")
             self.mv_original_btn.hidden = true
@@ -167,7 +167,7 @@ class FirstViewController: UIViewController, UIScrollViewDelegate, UIImagePicker
             self.userDefaults.synchronize()
         })
         
-        let cancelAction = UIAlertAction(title: "取消", style: .Default, handler: {
+        let cancelAction = UIAlertAction(title: NSLocalizedString("cancel", comment:""), style: .Default, handler: {
             (action:UIAlertAction) -> () in
         })
         
@@ -178,9 +178,9 @@ class FirstViewController: UIViewController, UIScrollViewDelegate, UIImagePicker
     
     @IBAction func mv_clear_btn_onTouch(sender: AnyObject) {
         
-        let confirm_clear_alert = UIAlertController(title: "清除地圖相關記錄", message:"確定清除地圖相關記錄？", preferredStyle: .Alert)
+        let confirm_clear_alert = UIAlertController(title: NSLocalizedString("mv_confirm_clear_alert_title", comment:""), message: NSLocalizedString("mv_confirm_clear_alert_message", comment:""), preferredStyle: .Alert)
         
-        let okAction = UIAlertAction(title: "確定", style: .Default, handler: {
+        let okAction = UIAlertAction(title: NSLocalizedString("confirm", comment:""), style: .Default, handler: {
             (action:UIAlertAction) -> () in
             self.remove_all_pins()
             self.mv_floor_btn.setImage(UIImage(named: self.getFloorNumImage("")), forState: UIControlState.Normal)
@@ -195,7 +195,7 @@ class FirstViewController: UIViewController, UIScrollViewDelegate, UIImagePicker
             self.set_output_text()
         })
         
-        let cancelAction = UIAlertAction(title: "取消", style: .Default, handler: {
+        let cancelAction = UIAlertAction(title: NSLocalizedString("cancel", comment:""), style: .Default, handler: {
             (action:UIAlertAction) -> () in
         })
         
@@ -214,25 +214,26 @@ class FirstViewController: UIViewController, UIScrollViewDelegate, UIImagePicker
             let time:String = userDefaults.objectForKey("time") as! String
             if ( parked_floor != "" )
             {
-                mv_output_label.text = "\(time) 停於\(parked_floor)樓下圖位置"
+                mv_output_label.text = String.localizedStringWithFormat(NSLocalizedString("mv_output_label_see_pin_at_floor", comment: ""), time, parked_floor)
             }
             else
             {
-                mv_output_label.text = "\(time) 停於下圖位置"
+                mv_output_label.text = String.localizedStringWithFormat(NSLocalizedString("mv_output_label_see_pin_below", comment: ""), time)
             }
         }
         else
         {
             if ( x_float != -1 && y_float != -1 )
             {
-                mv_output_label.text = "按上方中間圖示儲存記錄"
+                mv_output_label.text = NSLocalizedString("mv_output_label_pls_save", comment:"")
             }
             else
             {
-                mv_output_label.text = "請點出停車位置"
+                mv_output_label.text = NSLocalizedString("mv_output_label_pls_pin", comment:"")
             }
         }
     }
+    
     
     func fetchBackgroundImage(){
         if ( imageURL != "" )
@@ -304,9 +305,9 @@ class FirstViewController: UIViewController, UIScrollViewDelegate, UIImagePicker
         }
         else
         {
-            let remind_pin_alert = UIAlertController(title: "請點出停車位置", message:"請在圖上點出停車位置", preferredStyle: .Alert)
+            let remind_pin_alert = UIAlertController(title: NSLocalizedString("remind_pin_alert_title", comment:""), message: NSLocalizedString("remind_pin_alert_title", comment:""), preferredStyle: .Alert)
             
-            let okAction = UIAlertAction(title: "確定", style: .Default, handler: {
+            let okAction = UIAlertAction(title: NSLocalizedString("confirm", comment:""), style: .Default, handler: {
                 (action:UIAlertAction) -> () in
             })
             

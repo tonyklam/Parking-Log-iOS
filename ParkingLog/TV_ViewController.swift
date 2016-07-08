@@ -94,9 +94,9 @@ class SecondViewController: UIViewController, TV_Floor_View_Delegate, TV_Area_Vi
         }
         else
         {
-            let remind_input_alert = UIAlertController(title: "請輸入資料", message:"請輸入停車資料", preferredStyle: .Alert)
+            let remind_input_alert = UIAlertController(title: NSLocalizedString("remind_input_alert_title", comment:""), message:NSLocalizedString("remind_input_alert_message", comment:""), preferredStyle: .Alert)
             
-            let okAction = UIAlertAction(title: "確定", style: .Default, handler: {
+            let okAction = UIAlertAction(title: NSLocalizedString("confirm", comment:""), style: .Default, handler: {
                 (action:UIAlertAction) -> () in
             })
             
@@ -125,9 +125,9 @@ class SecondViewController: UIViewController, TV_Floor_View_Delegate, TV_Area_Vi
     
     func clearRecords() {
         
-        let confirm_clear_alert = UIAlertController(title: "清除相關記錄", message:"確定清除相關記錄？", preferredStyle: .Alert)
+        let confirm_clear_alert = UIAlertController(title: NSLocalizedString("tv_confirm_clear_alert_title", comment:""), message:NSLocalizedString("tv_confirm_clear_alert_message", comment:""), preferredStyle: .Alert)
         
-        let okAction = UIAlertAction(title: "確定", style: .Default, handler: {
+        let okAction = UIAlertAction(title: NSLocalizedString("confirm", comment:""), style: .Default, handler: {
             (action:UIAlertAction) -> () in
             let request = NSFetchRequest(entityName: "Record_Text")
             do {
@@ -148,7 +148,7 @@ class SecondViewController: UIViewController, TV_Floor_View_Delegate, TV_Area_Vi
             self.tv_tableView.reloadData()
         })
         
-        let cancelAction = UIAlertAction(title: "取消", style: .Default, handler: {
+        let cancelAction = UIAlertAction(title: NSLocalizedString("cancel", comment:""), style: .Default, handler: {
             (action:UIAlertAction) -> () in
         })
         
@@ -165,7 +165,12 @@ class SecondViewController: UIViewController, TV_Floor_View_Delegate, TV_Area_Vi
         entity.floor = floor
         entity.space = space
         entity.area = area
-        entity.direction = direction
+        if ( direction != "" ){
+            // When save, change all direction into "SW" format
+            entity.direction = NSLocalizedString(direction, comment:"")
+        }else{
+            entity.direction = direction
+        }
         entity.time = NSDate()
         
         do {

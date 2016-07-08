@@ -6,4 +6,81 @@
   Copyright © 2016 Tony Lam. All rights reserved.
 */
 
+"confirm" = "確定";
+
+"cancel" = "取消";
+
+/* Strings used in MV_ViewController.swift */
+
 "mv_output_label" = "按上方中間圖示儲存記錄";
+
+"confirm_original_alert_title" = "回復預設地圖背景";
+
+"confirm_original_alert_message" = "確定回復預設地圖背景？";
+
+"mv_confirm_clear_alert_title" = "清除地圖相關記錄";
+
+"mv_confirm_clear_alert_message" = "確定清除地圖相關記錄？";
+
+"remind_pin_alert_title" = "請點出停車位置";
+
+"remind_pin_alert_message" = "請在圖上點出停車位置";
+
+"mv_output_label_see_pin_at_floor" = "%@ 停於%@樓下圖位置";
+
+/* \(time) as in regular string */
+"mv_output_label_see_pin_below" = "%@ 停於下圖位置";
+
+"mv_output_label_pls_save" = "按上方中間圖示儲存記錄";
+
+"mv_output_label_pls_pin" = "請點出停車位置";
+
+
+/* Strings used in Record_Text.swift */
+
+"SW" = "左後";
+
+"S" = "正後";
+
+"SE" = "右後";
+
+"W" = "左";
+
+"E" = "右";
+
+"NW" = "左前";
+
+"N" = "正前";
+
+"NE" = "右前";
+
+/* When save, change all direction into "SW" format */
+"左後" = "SW";
+
+"正後" = "S";
+
+"右後" = "SE";
+
+"左" = "W";
+
+"右" = "E";
+
+"左前" = "NW";
+
+"正前" = "N";
+
+"右前" = "NE";
+
+/* Strings used in TV_ViewController.swift */
+
+"remind_input_alert_title" = "請輸入資料";
+
+"remind_input_alert_message" = "請輸入停車資料";
+
+"tv_confirm_clear_alert_title" = "清除相關記錄";
+
+"tv_confirm_clear_alert_message" = "確定清除相關記錄？";
+
+
+
+

@@ -13,9 +13,7 @@ protocol TV_Direction_View_Delegate  {
 }
 
 class TV_Direction_ViewController: UIViewController {
-    
-    let directionArray = ["左後","正後","右後","左","右","左前","正前","右前"]
-        
+       
     var delegate:TV_Direction_View_Delegate! = nil
     var directionText:String! = nil
     var result_direction:String = ""
