@@ -23,6 +23,8 @@ class TV_TableViewCell: UITableViewCell {
     @IBOutlet weak var tvc_direction_imageView: UIImageView!
     @IBOutlet weak var tvc_description_label: UILabel!
     
+    let screenWidth: CGFloat = UIScreen.mainScreen().bounds.width
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -40,10 +42,20 @@ class TV_TableViewCell: UITableViewCell {
         dateFormatter.dateFormat = "yyyy-MM-dd hh:mm"
         tvc_time_label.text = dateFormatter.stringFromDate(record.time!)
         
+        var base_x: CGFloat
+        if ( screenWidth < 350 ) //Like iPhone 5: 320
+        {
+            base_x = 60
+        }
+        else //Like iPhone 6 : 375
+        {
+            base_x = 90
+        }
+        
         if ( record.floor != "" )
         {
             tvc_floor_imageView.image = UIImage(named: record.getFloorNumImage())
-            tvc_floor_imageView.frame = CGRect(x: 167, y: 0, width: tvc_floor_imageView.frame.size.width, height: tvc_floor_imageView.frame.size.height)
+            tvc_floor_imageView.frame = CGRect(x: base_x+77, y: 0, width: tvc_floor_imageView.frame.size.width, height: tvc_floor_imageView.frame.size.height)
             tvc_floor_imageView.hidden = false
         }
         else
@@ -54,11 +66,11 @@ class TV_TableViewCell: UITableViewCell {
         if ( record.area != "" )
         {
             tvc_area_label.text = record.area
-            tvc_area_view.frame = CGRect(x: 167, y: 0, width: tvc_area_view.frame.size.width, height: tvc_area_view.frame.size.height)
+            tvc_area_view.frame = CGRect(x: base_x+77, y: 0, width: tvc_area_view.frame.size.width, height: tvc_area_view.frame.size.height)
             
             if ( record.floor != "" )
             {
-                tvc_floor_imageView.frame = CGRect(x: 145, y: 0, width: tvc_floor_imageView.frame.size.width, height: tvc_floor_imageView.frame.size.height)
+                tvc_floor_imageView.frame = CGRect(x: base_x+55, y: 0, width: tvc_floor_imageView.frame.size.width, height: tvc_floor_imageView.frame.size.height)
                 tvc_area_view.frame = CGRect(x: tvc_floor_imageView.frame.origin.x + 45, y: 0, width: tvc_area_view.frame.size.width, height: tvc_area_view.frame.size.height)
             }
             tvc_area_view.hidden = false
@@ -72,25 +84,25 @@ class TV_TableViewCell: UITableViewCell {
         {
             tvc_space_label.font = UIFont(name: "Press Start 2P", size: record.getSpaceFontSize())
             tvc_space_label.text = record.space
-            tvc_space_view.frame = CGRect(x: 142, y: 0, width: tvc_space_view.frame.size.width, height: tvc_space_view.frame.size.height)
+            tvc_space_view.frame = CGRect(x: base_x+52, y: 0, width: tvc_space_view.frame.size.width, height: tvc_space_view.frame.size.height)
             
             if ( record.floor != "" )
             {
                 if ( record.area != "" )
                 {
-                    tvc_floor_imageView.frame = CGRect(x: 90, y: 0, width: tvc_floor_imageView.frame.size.width, height: tvc_floor_imageView.frame.size.height)
+                    tvc_floor_imageView.frame = CGRect(x: base_x, y: 0, width: tvc_floor_imageView.frame.size.width, height: tvc_floor_imageView.frame.size.height)
                     tvc_area_view.frame = CGRect(x: tvc_floor_imageView.frame.origin.x + 45, y: 0, width: tvc_area_view.frame.size.width, height: tvc_area_view.frame.size.height)
                     tvc_space_view.frame = CGRect(x: tvc_area_view.frame.origin.x + 45, y: 0, width: tvc_space_view.frame.size.width, height: tvc_space_view.frame.size.height)
                 }
                 else
                 {
-                    tvc_floor_imageView.frame = CGRect(x: 130, y: 0, width: tvc_floor_imageView.frame.size.width, height: tvc_floor_imageView.frame.size.height)
+                    tvc_floor_imageView.frame = CGRect(x: base_x+40, y: 0, width: tvc_floor_imageView.frame.size.width, height: tvc_floor_imageView.frame.size.height)
                     tvc_space_view.frame = CGRect(x: tvc_floor_imageView.frame.origin.x + 45, y: 0, width: tvc_space_view.frame.size.width, height: tvc_space_view.frame.size.height)
                 }
             }
             else if ( record.area != "")
             {
-                tvc_area_view.frame = CGRect(x: 130, y: 0, width: tvc_area_view.frame.size.width, height: tvc_area_view.frame.size.height)
+                tvc_area_view.frame = CGRect(x: base_x+40, y: 0, width: tvc_area_view.frame.size.width, height: tvc_area_view.frame.size.height)
                 tvc_space_view.frame = CGRect(x: tvc_area_view.frame.origin.x + 45, y: 0, width: tvc_space_view.frame.size.width, height: tvc_space_view.frame.size.height)
             }
             
@@ -104,7 +116,7 @@ class TV_TableViewCell: UITableViewCell {
         if ( record.direction != "" )
         {
             tvc_direction_imageView.image = UIImage(named: record.getDirectionImage())
-            tvc_direction_imageView.frame = CGRect(x: 167, y: 0, width: tvc_direction_imageView.frame.size.width, height: tvc_direction_imageView.frame.size.height)
+            tvc_direction_imageView.frame = CGRect(x: base_x+77, y: 0, width: tvc_direction_imageView.frame.size.width, height: tvc_direction_imageView.frame.size.height)
             
             if ( record.floor != "" )
             {
@@ -112,27 +124,27 @@ class TV_TableViewCell: UITableViewCell {
                 {
                     if ( record.space != "" )
                     {
-                        tvc_floor_imageView.frame = CGRect(x: 74, y: 0, width: tvc_floor_imageView.frame.size.width, height: tvc_floor_imageView.frame.size.height)
+                        tvc_floor_imageView.frame = CGRect(x: base_x-16, y: 0, width: tvc_floor_imageView.frame.size.width, height: tvc_floor_imageView.frame.size.height)
                         tvc_area_view.frame = CGRect(x: tvc_floor_imageView.frame.origin.x + 45, y: 0, width: tvc_area_view.frame.size.width, height: tvc_area_view.frame.size.height)
                         tvc_space_view.frame = CGRect(x: tvc_area_view.frame.origin.x + 45, y: 0, width: tvc_space_view.frame.size.width, height: tvc_space_view.frame.size.height)
                         tvc_direction_imageView.frame = CGRect(x: tvc_space_view.frame.origin.x + 95, y: 0, width: tvc_direction_imageView.frame.size.width, height: tvc_direction_imageView.frame.size.height)
                     }
                     else
                     {
-                        tvc_floor_imageView.frame = CGRect(x: 110, y: 0, width: tvc_floor_imageView.frame.size.width, height: tvc_floor_imageView.frame.size.height)
+                        tvc_floor_imageView.frame = CGRect(x: base_x+20, y: 0, width: tvc_floor_imageView.frame.size.width, height: tvc_floor_imageView.frame.size.height)
                         tvc_area_view.frame = CGRect(x: tvc_floor_imageView.frame.origin.x + 45, y: 0, width: tvc_area_view.frame.size.width, height: tvc_area_view.frame.size.height)
                         tvc_direction_imageView.frame = CGRect(x: tvc_area_view.frame.origin.x + 45, y: 0, width: tvc_direction_imageView.frame.size.width, height: tvc_direction_imageView.frame.size.height)
                     }
                 }
                 else if ( record.space != "" )
                 {
-                    tvc_floor_imageView.frame = CGRect(x: 90, y: 0, width: tvc_floor_imageView.frame.size.width, height: tvc_floor_imageView.frame.size.height)
+                    tvc_floor_imageView.frame = CGRect(x: base_x, y: 0, width: tvc_floor_imageView.frame.size.width, height: tvc_floor_imageView.frame.size.height)
                     tvc_space_view.frame = CGRect(x: tvc_floor_imageView.frame.origin.x + 45, y: 0, width: tvc_space_view.frame.size.width, height: tvc_space_view.frame.size.height)
                     tvc_direction_imageView.frame = CGRect(x: tvc_space_view.frame.origin.x + 95, y: 0, width: tvc_direction_imageView.frame.size.width, height: tvc_direction_imageView.frame.size.height)
                 }
                 else
                 {
-                    tvc_floor_imageView.frame = CGRect(x: 145, y: 0, width: tvc_floor_imageView.frame.size.width, height: tvc_floor_imageView.frame.size.height)
+                    tvc_floor_imageView.frame = CGRect(x: base_x+55, y: 0, width: tvc_floor_imageView.frame.size.width, height: tvc_floor_imageView.frame.size.height)
                     tvc_direction_imageView.frame = CGRect(x: tvc_floor_imageView.frame.origin.x + 45, y: 0, width: tvc_direction_imageView.frame.size.width, height: tvc_direction_imageView.frame.size.height)
                 }
             }
@@ -140,19 +152,19 @@ class TV_TableViewCell: UITableViewCell {
             {
                 if ( record.space != "" )
                 {
-                    tvc_area_view.frame = CGRect(x: 90, y: 0, width: tvc_area_view.frame.size.width, height: tvc_area_view.frame.size.height)
+                    tvc_area_view.frame = CGRect(x: base_x, y: 0, width: tvc_area_view.frame.size.width, height: tvc_area_view.frame.size.height)
                     tvc_space_view.frame = CGRect(x: tvc_area_view.frame.origin.x + 45, y: 0, width: tvc_space_view.frame.size.width, height: tvc_space_view.frame.size.height)
                     tvc_direction_imageView.frame = CGRect(x: tvc_space_view.frame.origin.x + 95, y: 0, width: tvc_direction_imageView.frame.size.width, height: tvc_direction_imageView.frame.size.height)
                 }
                 else
                 {
-                    tvc_area_view.frame = CGRect(x: 145, y: 0, width: tvc_area_view.frame.size.width, height: tvc_area_view.frame.size.height)
+                    tvc_area_view.frame = CGRect(x: base_x+55, y: 0, width: tvc_area_view.frame.size.width, height: tvc_area_view.frame.size.height)
                     tvc_direction_imageView.frame = CGRect(x: tvc_area_view.frame.origin.x + 45, y: 0, width: tvc_direction_imageView.frame.size.width, height: tvc_direction_imageView.frame.size.height)
                 }
             }
             else if ( record.space != "" )
             {
-                tvc_space_view.frame = CGRect(x: 130, y: 0, width: tvc_space_view.frame.size.width, height: tvc_space_view.frame.size.height)
+                tvc_space_view.frame = CGRect(x: base_x+40, y: 0, width: tvc_space_view.frame.size.width, height: tvc_space_view.frame.size.height)
                 tvc_direction_imageView.frame = CGRect(x: tvc_space_view.frame.origin.x + 95, y: 0, width: tvc_direction_imageView.frame.size.width, height: tvc_direction_imageView.frame.size.height)
             }
             

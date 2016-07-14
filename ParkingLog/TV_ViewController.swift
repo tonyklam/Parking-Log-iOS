@@ -90,6 +90,13 @@ class SecondViewController: UIViewController, TV_Floor_View_Delegate, TV_Area_Vi
         if ( tv_floor_textField.text != "" || tv_space_textField.text != "" || tv_area_textField.text != "" || tv_direction_textField.text != "" )
         {
             addRecord(tv_floor_textField.text!, space: tv_space_textField.text!, area: tv_area_textField.text!, direction: tv_direction_textField.text!)
+            
+            // will only show the added info to the table
+            tv_tableView.reloadData()
+            
+            // the following is workaround for setCell() for the first load
+            tv_tableView.setNeedsLayout()
+            tv_tableView.layoutIfNeeded()
             tv_tableView.reloadData()
         }
         else
