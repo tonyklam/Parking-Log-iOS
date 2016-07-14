@@ -81,6 +81,20 @@
 
 "tv_confirm_clear_alert_message" = "確定清除相關記錄？";
 
+/* Strings used in Record_Text.swift */
 
+"record_text_description_1" = "停於";
+
+"record_text_description_2" = "%@樓";
+
+"record_text_description_3" = "%@區";
+
+"record_text_description_4" = "%@號車位";
+
+"record_text_description_5a" = "，出電梯後%@方";
+
+"record_text_description_5b" = "出電梯後%@方";
+
+"period" = "。";
 
 

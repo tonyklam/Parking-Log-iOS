@@ -19,26 +19,36 @@ class Record_Text: NSManagedObject {
     {
         var output_txt: String = ""
         
-        output_txt = "Pakred at"
         
+        if ( floor != "" || area != "" || space != "" )
+        {
+            output_txt = NSLocalizedString("record_text_description_1", comment:"")
+        }
         if ( floor != "" )
         {
-            output_txt += " " + floor! + " Floor";
+            output_txt += String.localizedStringWithFormat(NSLocalizedString("record_text_description_2", comment: ""), floor!)
         }
         if ( area != "" )
         {
-            output_txt += " at Area " + area!
+            output_txt += String.localizedStringWithFormat(NSLocalizedString("record_text_description_3", comment: ""), area!)
         }
         if ( space != "" )
         {
-            output_txt += " in Space " + space!
+            output_txt += String.localizedStringWithFormat(NSLocalizedString("record_text_description_4", comment: ""), space!)
         }
         if ( direction != "" )
         {
-            output_txt += ", go " + direction! + " after lift"
+            if ( floor != "" || area != "" || space != "" )
+            {
+                output_txt += String.localizedStringWithFormat(NSLocalizedString("record_text_description_5a", comment: ""), NSLocalizedString(direction!, comment:""))
+            }
+            else
+            {
+                output_txt += String.localizedStringWithFormat(NSLocalizedString("record_text_description_5b", comment: ""), NSLocalizedString(direction!, comment:""))
+            }
         }
         
-        return output_txt + ".\n"
+        return output_txt + NSLocalizedString("period", comment:"")
     }
     
     func getFloorNumImage() -> String

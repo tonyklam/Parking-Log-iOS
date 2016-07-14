@@ -125,17 +125,18 @@ class FirstViewController: UIViewController, UIScrollViewDelegate, UIImagePicker
         imageURL = referenceURL.absoluteString
         
         let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage
-       
-        mv_background_imageView.image = pickedImage
         
         //Save Image to Camera Roll
         //UIImageWriteToSavedPhotosAlbum(mv_background_imageView.image!, nil, nil, nil)
         
         //Save Image to userDefaults
-        let imageData: NSData = UIImagePNGRepresentation(pickedImage!)!
+        let imageData: NSData = UIImageJPEGRepresentation(pickedImage!, 1.0)!
         userDefaults.setObject(imageData, forKey:"bg_image")
         userDefaults.setBool(true, forKey:"hasBgImage")
         userDefaults.synchronize()
+        
+        mv_background_imageView.image = UIImage(data: imageData)
+        //mv_background_imageView.image = pickedImage
         
         self.dismissViewControllerAnimated(true, completion:{
             self.mv_original_btn.hidden = false

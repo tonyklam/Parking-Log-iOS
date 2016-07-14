@@ -61,3 +61,19 @@
 "tv_confirm_clear_alert_title" = "Delete related record";
 
 "tv_confirm_clear_alert_message" = "Confirm deleting related record？";
+
+/* Strings used in Record_Text.swift */
+
+"record_text_description_1" = "Pakred";
+
+"record_text_description_2" = " on %@ Floor";
+
+"record_text_description_3" = " at Area %@";
+
+"record_text_description_4" = " in Space %@";
+
+"record_text_description_5a" = ", go %@";
+
+"record_text_description_5b" = "Go %@";
+
+"period" = ".";
