@@ -109,21 +109,22 @@
                         <constraints>
                             <constraint firstItem="vFW-kj-pJ6" firstAttribute="bottom" secondItem="4ug-Mw-9AY" secondAttribute="top" id="0ff-lp-3k5"/>
                             <constraint firstItem="CWK-Qf-3wM" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="-1" id="1tO-l5-ZWc"/>
-                            <constraint firstItem="XuP-Jb-gQC" firstAttribute="leading" secondItem="vFW-kj-pJ6" secondAttribute="leading" id="6Ta-ko-5bq"/>
                             <constraint firstItem="XuP-Jb-gQC" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="8N3-UZ-UDc"/>
                             <constraint firstItem="feW-P2-pNf" firstAttribute="leading" secondItem="nXd-7P-dP6" secondAttribute="trailing" constant="16" id="Dy6-RV-pKt"/>
                             <constraint firstItem="nXd-7P-dP6" firstAttribute="top" secondItem="feW-P2-pNf" secondAttribute="bottom" constant="-40" id="EUW-Wv-Afx"/>
                             <constraint firstAttribute="trailingMargin" secondItem="feW-P2-pNf" secondAttribute="trailing" constant="-1" id="FQc-g0-ZG9"/>
+                            <constraint firstAttribute="trailing" secondItem="XuP-Jb-gQC" secondAttribute="trailing" id="KsA-GP-ga8"/>
                             <constraint firstAttribute="trailing" secondItem="XuP-Jb-gQC" secondAttribute="trailing" id="NGD-As-yhw"/>
                             <constraint firstItem="CWK-Qf-3wM" firstAttribute="top" secondItem="U1S-IA-BjZ" secondAttribute="top" id="ObW-U1-gRy"/>
                             <constraint firstItem="sOk-zc-Imn" firstAttribute="centerX" secondItem="XuP-Jb-gQC" secondAttribute="centerX" id="PFL-pk-9Mo"/>
-                            <constraint firstItem="XuP-Jb-gQC" firstAttribute="trailing" secondItem="vFW-kj-pJ6" secondAttribute="trailing" id="RZr-sc-v5T"/>
+                            <constraint firstItem="vFW-kj-pJ6" firstAttribute="top" secondItem="XuP-Jb-gQC" secondAttribute="top" constant="28" id="VO5-ES-ZRM"/>
+                            <constraint firstAttribute="trailing" secondItem="vFW-kj-pJ6" secondAttribute="trailing" id="Wtk-pe-6Tu"/>
                             <constraint firstItem="CWK-Qf-3wM" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="8" symbolic="YES" id="cpI-Aa-84L"/>
                             <constraint firstItem="nXd-7P-dP6" firstAttribute="top" secondItem="sOk-zc-Imn" secondAttribute="top" id="l7d-u1-l5t"/>
                             <constraint firstItem="U1S-IA-BjZ" firstAttribute="top" secondItem="sOk-zc-Imn" secondAttribute="top" id="mhI-HA-M3N"/>
                             <constraint firstItem="XuP-Jb-gQC" firstAttribute="top" secondItem="CWK-Qf-3wM" secondAttribute="bottom" constant="11" id="pQr-Bf-BH8"/>
-                            <constraint firstItem="vFW-kj-pJ6" firstAttribute="top" secondItem="XuP-Jb-gQC" secondAttribute="bottom" constant="7" id="qLY-LT-Ngk"/>
                             <constraint firstItem="U1S-IA-BjZ" firstAttribute="leading" secondItem="CWK-Qf-3wM" secondAttribute="trailing" constant="13" id="tjR-pP-rVU"/>
+                            <constraint firstItem="vFW-kj-pJ6" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="zJx-Ix-jhV"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="地圖" image="tabbar_map_icon.png" id="acW-dT-cKf"/>
